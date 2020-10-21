@@ -49,7 +49,7 @@ As a user I would like:
 
 # Support and Contacts
 
-In case You have any issues using this code please do not hesitate to get in touch with me through maratah7@gmail.com or leave a commit here on github.
+In case You have any issues using this code please do not hesitate to get in touch with me through deejaykayslyk@gmail.com or leave a commit here on github.
 
 ## Known Bugs
 
@@ -63,5 +63,5 @@ No known bugs
 
 ### License
 
-**[MIT](./LICENSE)** (c) 2020 **[MaratahNjoroge](https://github.com/SILVIAKAGO/newsapi/Portfolio-LP)**
+**[kay](./LICENSE)** (c) 2020 **[silviakago](https://github.com/SILVIAKAGO/newsapi/Portfolio-LP)**
 # newsapi
