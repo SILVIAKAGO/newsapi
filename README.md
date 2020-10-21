@@ -23,7 +23,7 @@ As a user I would like:
 | Read an entire article | **Click** on an article | Directed to the source's site to read the entire article |
 
 ## Prerequisites
-* Python3.6
+* Python3.8
 
 ## How to use it
 * must have internet connection
@@ -36,7 +36,7 @@ As a user I would like:
 * internet access
 * git clone https://github.com/SILVIAKAGO/newsapi
 * $ cd news-highlights
-* $ python3.6 -m venv virtual (install virtual environment)
+* $ python3.8 -m venv virtual (install virtual environment)
 * $ source virtual/bin/activate
 * $ python3.6 -m pip install -r requirements.txt (install all dependencies)
 * Inside the manage.py module change the config_name parameter from 'production' to 'development' ie app = create_app('production') should be app = create_app('development')
@@ -56,7 +56,7 @@ In case You have any issues using this code please do not hesitate to get in tou
 No known bugs
 
 ## Technologies Used
-- Python3.6
+- Python3.8
 - Flask framework
 - Bootstrap
 - Coolors
