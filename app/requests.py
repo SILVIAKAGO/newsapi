@@ -7,19 +7,25 @@ api_key = None
 
 # Getting the news base url
 base_url = None
-
+sources_url=None
 
 def configure_request(app):
-    global api_key, base_url
+    global api_key, base_url, sources_url
     api_key = app.config['NEWS_API_KEY']
     base_url = app.config['NEWS_API_BASE_URL']
-
-def get_sources(source):
+    sources_url = app.config['NEWS_API_SOURCE_URL']
+    
+    
+def get_sources(endpoint):
     """
     Function to retrieve news sources list from the News api
     """
-
-    get_sources_url = base_url.format(source, api_key)
+    
+    get_sources_url = sources_url.format(endpoint, api_key)
+    # print("\n")
+    # print(get_sources_url)
+    # print("\n")
+    
     
 
     with urllib.request.urlopen(get_sources_url) as url:
@@ -59,7 +65,19 @@ def process_results(sources_list):
         sources_results.append(source_object)
 
     return sources_results
-
+# def get_sources(category):
+#     '''
+#     Function that gets the json response to our url request
+#     '''
+#     get_sources_url = base_url.format(category, api_key)
+#     with urllib.request.urlopen(get_sources_url) as url:
+#         get_sources_data = url.read()
+#         get_sources_response = json.loads(get_sources_data)
+#         sources_results = None
+#         if get_sources_response['sources']:
+#             sources_results_list = get_sources_response['sources']
+#             sources_results = process_sources(sources_results_list)
+#     return sources_results
 
 def get_articles(id):
     '''
