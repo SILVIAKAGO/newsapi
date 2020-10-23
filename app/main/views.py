@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect
 from . import main
-from ..requests import get_sources ,get_articles
+from ..requests import get_articles, get_sources
 
 
 @main.route('/')
@@ -11,8 +11,15 @@ def index():
     """
     title = 'Home- Welcome News Highlights Website'
     # Getting the news sources
-    news_sources = get_sources('sources')
-    return render_template('index.html', title=title, sources=news_sources)
+    # news_sources = get_sources('sources')
+    business = get_sources('business')
+    entertainment = get_sources('entertainment')
+    # general = get_sources('general')
+    health  = get_sources('health')
+    science = get_sources('science')
+    sports = get_sources('sports')
+    technology = get_sources('technology')
+    return render_template('index.html',title = title, business = business,entertainment = entertainment,health = health,science = science, sports = sports,technology = technology)
 
 @main.route('/articles/<source_id>')
 def articles(source_id):
