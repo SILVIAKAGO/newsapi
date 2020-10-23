@@ -19,8 +19,20 @@
     <div class="container-fluid">
       <div class="row">
         <ul>
-          {{ macro.displaySourcesList(sources)}}
+          <!-- {{ macro.displaySourcesList(sources)}} -->
+          <!-- {% for news in news_sources%}
+           <li>{{news.sources}}</li>
+          {% endfor %} -->
+          <h3>Business</h3>
+          {{macro.displaySourcesList(business)}}
+          <h3>Entertainment</h3>
+          {{macro.displaySourcesList(entertainment)}}
+          <h3>Health</h3>
+          {{macro.displaySourcesList(health)}}
+          <h3>Technology</h3>
+          {{macro.displaySourcesList(technology)}}
         </ul>
       </div>
     </div>
+  </div>
 {% endblock %}
