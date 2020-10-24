@@ -1,0 +1,25 @@
+
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+{% block styles %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+<div class="container-fluid" style="margin-top:10px;"></div>
+    <div class="container-fluid">
+      <div class="row">
+        <ul>
+          <h3>Business</h3>
+          {{macro.displaySourcesList(business)}}
+          <h3>Entertainment</h3>
+          {{macro.displaySourcesList(entertainment)}}
+          <h3>Health</h3>
+          {{macro.displaySourcesList(health)}}
+          <h3>Technology</h3>
+          {{macro.displaySourcesList(technology)}}
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endblock %}
